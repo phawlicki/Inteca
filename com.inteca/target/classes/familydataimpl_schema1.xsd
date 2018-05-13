@@ -1,0 +1,109 @@
+<xs:schema xmlns:tns="http://service.family/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://service.family/" version="1.0">
+
+  <xs:element name="createChild" type="tns:createChild"/>
+
+  <xs:element name="createChildResponse" type="tns:createChildResponse"/>
+
+  <xs:element name="createFather" type="tns:createFather"/>
+
+  <xs:element name="createFatherResponse" type="tns:createFatherResponse"/>
+
+  <xs:element name="createMother" type="tns:createMother"/>
+
+  <xs:element name="createMotherResponse" type="tns:createMotherResponse"/>
+
+  <xs:element name="readChild" type="tns:readChild"/>
+
+  <xs:element name="readChildResponse" type="tns:readChildResponse"/>
+
+  <xs:element name="readFather" type="tns:readFather"/>
+
+  <xs:element name="readFatherResponse" type="tns:readFatherResponse"/>
+
+  <xs:element name="readMother" type="tns:readMother"/>
+
+  <xs:element name="readMotherResponse" type="tns:readMotherResponse"/>
+
+  <xs:complexType name="readMother">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="readMotherResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:familyMember"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="familyMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date_of_birth" type="xs:string"/>
+      <xs:element name="fmember_ids" type="xs:int"/>
+      <xs:element minOccurs="0" name="fmember_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+      <xs:element minOccurs="0" name="type_of_fmember" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createChild">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fmember_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+      <xs:element minOccurs="0" name="date_of_birth" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createChildResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="readChild">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="readChildResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:familyMember"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="readFather">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="readFatherResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:familyMember"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createFather">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fmember_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+      <xs:element minOccurs="0" name="date_of_birth" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createFatherResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="createMother">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fmember_name" type="xs:string"/>
+      <xs:element minOccurs="0" name="surname" type="xs:string"/>
+      <xs:element minOccurs="0" name="date_of_birth" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createMotherResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="FamilyDataImplService" targetNamespace="http://service.family/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.family/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://service.family/" schemaLocation="familydataimpl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="readMother">
+    <wsdl:part name="parameters" element="tns:readMother">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createChild">
+    <wsdl:part name="parameters" element="tns:createChild">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readChild">
+    <wsdl:part name="parameters" element="tns:readChild">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readChildResponse">
+    <wsdl:part name="parameters" element="tns:readChildResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readFather">
+    <wsdl:part name="parameters" element="tns:readFather">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createFatherResponse">
+    <wsdl:part name="parameters" element="tns:createFatherResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createFather">
+    <wsdl:part name="parameters" element="tns:createFather">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createMother">
+    <wsdl:part name="parameters" element="tns:createMother">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createMotherResponse">
+    <wsdl:part name="parameters" element="tns:createMotherResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readMotherResponse">
+    <wsdl:part name="parameters" element="tns:readMotherResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createChildResponse">
+    <wsdl:part name="parameters" element="tns:createChildResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="readFatherResponse">
+    <wsdl:part name="parameters" element="tns:readFatherResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="FamilyData">
+    <wsdl:operation name="readMother">
+      <wsdl:input name="readMother" message="tns:readMother">
+    </wsdl:input>
+      <wsdl:output name="readMotherResponse" message="tns:readMotherResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createChild">
+      <wsdl:input name="createChild" message="tns:createChild">
+    </wsdl:input>
+      <wsdl:output name="createChildResponse" message="tns:createChildResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readChild">
+      <wsdl:input name="readChild" message="tns:readChild">
+    </wsdl:input>
+      <wsdl:output name="readChildResponse" message="tns:readChildResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readFather">
+      <wsdl:input name="readFather" message="tns:readFather">
+    </wsdl:input>
+      <wsdl:output name="readFatherResponse" message="tns:readFatherResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createFather">
+      <wsdl:input name="createFather" message="tns:createFather">
+    </wsdl:input>
+      <wsdl:output name="createFatherResponse" message="tns:createFatherResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createMother">
+      <wsdl:input name="createMother" message="tns:createMother">
+    </wsdl:input>
+      <wsdl:output name="createMotherResponse" message="tns:createMotherResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FamilyDataImplServiceSoapBinding" type="tns:FamilyData">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="readMother">
+      <soap:operation soapAction="urn:ReadMother" style="document"/>
+      <wsdl:input name="readMother">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="readMotherResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createChild">
+      <soap:operation soapAction="urn:CreateChild" style="document"/>
+      <wsdl:input name="createChild">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createChildResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readChild">
+      <soap:operation soapAction="urn:ReadChild" style="document"/>
+      <wsdl:input name="readChild">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="readChildResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readFather">
+      <soap:operation soapAction="urn:ReadFather" style="document"/>
+      <wsdl:input name="readFather">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="readFatherResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createFather">
+      <soap:operation soapAction="urn:CreateFather" style="document"/>
+      <wsdl:input name="createFather">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createFatherResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createMother">
+      <soap:operation soapAction="urn:CreateMother" style="document"/>
+      <wsdl:input name="createMother">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createMotherResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FamilyDataImplService">
+    <wsdl:port name="FamilyDataImplPort" binding="tns:FamilyDataImplServiceSoapBinding">
+      <soap:address location="http://localhost:8080/service/hello"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

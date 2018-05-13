@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<APPLICATION_INFORMATION fmemberIds="1" fmemberName="Ada" surname="Miko" dateOfBirth="2010-05-09T14:50:24.988+02:00" typeOfFmember="Mother"/>
+	<APPLICATION_INFORMATION fmemberIds="2" fmemberName="Stefan" surname="Miko" dateOfBirth="1994-05-09T14:50:24.988+02:00" typeOfFmember="Father"/>
+	<APPLICATION_INFORMATION fmemberIds="3" fmemberName="Miecio" surname="Miko" dateOfBirth="1990-05-09T14:50:24.988+02:00" typeOfFmember="Child"/>
+	<APPLICATION_INFORMATION fmemberIds="4" fmemberName="Gosia" surname="Miko" dateOfBirth="1780-05-09T14:50:24.988+02:00" typeOfFmember="Child"/>
+	<APPLICATION_INFORMATION fmemberIds="5" fmemberName="Julia" surname="Wat" dateOfBirth="1930-05-09T14:50:24.988+02:00" typeOfFmember="Mother"/>
+	<APPLICATION_INFORMATION fmemberIds="6" fmemberName="Grzechu" surname="Wat" dateOfBirth="1940-05-09T14:50:24.988+02:00" typeOfFmember="Father"/>
+	<APPLICATION_INFORMATION fmemberIds="7" fmemberName="Tymon" surname="Wat" dateOfBirth="1234-05-09T14:50:24.988+02:00" typeOfFmember="Child"/>
+</dataset>
